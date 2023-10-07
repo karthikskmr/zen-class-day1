@@ -1,0 +1,117 @@
+﻿Objects in Javascript:
+
+
+In JavaScript, an object is a collection of key-value pairs, 
+
+
+Where each key is a string (or a Symbol) that acts as a unique identifier for a value.
+
+
+ These key-value pairs are often referred to as properties.
+Example:
+
+
+Const userDetails= {
+        Name:”karthik”,
+        Age:”25”,
+        Profession:”PHP Developer”,
+        City:”Trichy”
+}
+Objects and Properties:
+
+
+A JavaScript object has properties associated with it. 
+
+
+A property of an object can be explained as a variable that is attached to the object.
+
+
+ Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects. 
+The properties of an object define the characteristics of the object. You access the properties of an object with a simple dot-notation:
+
+
+Syntax:
+        objectName.propertyName
+
+
+
+
+console.log(userDetails.name);
+console.log(userDetails.Age);
+Output:
+     karthik
+     25
+
+
+We can define property by defining value
+
+
+
+
+var myCar = new Object();
+myCar.make = 'Ford';
+
+
+Basically unassigned properties of objects are undefined. (Not in null) 
+
+
+myCar.color; // undefined
+
+
+
+
+Multiple type of object creation
+
+
+        let obj = new Object(); //object creation
+        
+        
+        obj.name = “karthik”; //property name and value assign
+        obj.age=25; 
+        We can also use like this
+        obj[‘city’]= ‘trichy’;  
+        console.log(obj); //{name: 'karthik', age: 25, city: 'trichy'}
+
+
+
+
+Create JavaScript Object with Object Literal
+ 
+In a single line we can assign objects
+let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+
+Create JavaScript Object with Constructor:
+
+
+function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+}
+let car1 = new Vehicle(’Fiesta’, 'Ford’);
+let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+console.log(car1.name);    //Output: Fiesta
+console.log(car2.name);    //Output: Santa Fe
+
+
+
+
+Using the Object.create method
+
+
+Objects can also be created using the Object.create() method.
+ This method can be very useful, because it allows you to choose the prototype object for the object you want to create, without having to define a constructor function.
+
+
+
+
+example
+ var Animal = {
+ type: 'Invertebrates', // Default value of properties
+ displayType: function() { // Method which will display type       of Animal
+ console.log(this.type);
+ }
+ };
+
+
+var animal1 = Object.create(Animal);

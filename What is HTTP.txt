@@ -1,0 +1,51 @@
+﻿What is HTTP:
+HTTP stands for Hypertext Transfer Protocol.its used for communicating server from client using request and response.
+HTTP 1.1:
+        HTTP/1.1 was created in 1997.Client sent the request to the server .then the server sent the response for the particular request.
+The version HTTP/1.1 first the client and server connection should be established then the data transfer process will be occured.
+The connection was not lost here after the first request because we add a keep-alive header which is part of the request.which means several requests & responses are merged in a single connection.
+ The first problem is HTTP/1.1 transfer all the requests & responses in the plain text message form. 
+The second one is head of line blocking in which TCP connection is blocked by all other requests until the response does not receive. 
+All the information related to the header file is repeated in every request.
+  
+HTTP 2:
+HTTP/2 was developed over the SPDY protocol in the early 2010s. 
+HTTP/2 works on the binary framing layer instead of textual that converts all the messages in binary format.
+ it works on fully multiplexed, that is one TCP connection is used for multiple requests.
+
+
+Difference Between HTTP1.1 vs HTTP2
+
+
+HTTP/1.1
+	HTTP2
+	HTTP/1.1 transfer all the requests & responses in the plain text message form. 
+
+
+	HTTP2 transfers all the requests & responses in the binary form. 
+	
+
+There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+
+
+	
+
+It allows multiplexing so one TCP connection is required for multiple requests.
+
+
+	It compresses data by itself.
+	It uses HPACK for data compression.
+
+
+	
+
+It uses requests resource Inlining for use getting multiple pages        
+
+
+	
+
+It uses PUSH frame by server that collects all multiple pages
+
+
+	It does not  remove the duplication and overhead of data transmitted.
+	It removes the duplication and overhead of data transmitted.
